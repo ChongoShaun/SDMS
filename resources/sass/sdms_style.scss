@@ -1,0 +1,27 @@
+// Declare custom fonts
+
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Import bootstrap and fontawesome
+@import "bootstrap";
+@import "font-awesome";
+
+// Bootstrap Starter Template Styles
+body {
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.row{
+		margin-bottom:20px;
+	div{
+		padding:20px;
+		background-color:#ccc;
+		border-right:1px solid red;
+		&:last-child{
+// 			border:none;
+		}
+	}
+}
