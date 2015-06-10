@@ -23,5 +23,10 @@ body {
 		&:last-child{
 // 			border:none;
 		}
+		div{
+			padding:0;
+			background-color:none;
+			border:none;
+		}
 	}
 }

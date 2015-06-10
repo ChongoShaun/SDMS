@@ -1,3 +1,9 @@
+var onError = function (err) {  
+  gutil.beep();
+  console.log(gutil.colors.red(err));
+};
+
+
 var gulp = require('gulp'); 
 
 // Plugins
@@ -9,6 +15,9 @@ var sass = require('gulp-ruby-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
+var gutil = require('gulp-util');
+var bourbon = require('node-bourbon').includePaths;
 var reload = browserSync.reload;
 
 var config = {
@@ -60,11 +69,31 @@ gulp.task('css', function() {
 
 });
 
-// Rerun the task when a file changes
+// Compile Our Sass
+/*
+gulp.task('sass', function() {
+    gulp.src(config.sassPath + '/sdms_style.scss')
+	    .pipe(plumber({
+	      errorHandler: onError,
 
-gulp.task('watch', function() {
-    gulp.watch(config.sassPath + '/**/*.scss', ['css']);
+	    }))
+
+		.pipe(sass({
+			includePaths: ['sass'].concat(bourbon),
+			loadPath: [
+                './resources/sass',
+                config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
+                config.bowerDir + '/fontawesome/scss',
+            ]}).on('error', sass.logError))
+  		.pipe(minifyCss())
+		.pipe(gulp.dest('./public/assets/css'))
+        .pipe(reload({stream: true}));
+
 });
+*/
+
+
+
 
 // Watch Files For Changes
 gulp.task('watch', function() {
