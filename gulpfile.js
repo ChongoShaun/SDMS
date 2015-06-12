@@ -17,7 +17,6 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
-var bourbon = require('node-bourbon').includePaths;
 var reload = browserSync.reload;
 
 var config = {
@@ -39,10 +38,9 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
     return gulp.src('./public/assets/js/*.js')
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./public/assets/dist'));
+        .pipe(gulp.dest('./public/assets/js'));
 });
 
 
@@ -58,7 +56,9 @@ gulp.task('css', function() {
             loadPath: [
                 './resources/sass',
                 config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
+                config.bowerDir + '/bootstrap-sass-official/assets/stylesheets/bootstrap',
                 config.bowerDir + '/fontawesome/scss',
+                require('node-bourbon').includePaths
             ]
         })
             .on("error", notify.onError(function (error) {
@@ -99,8 +99,7 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
    browserSync.init({
         proxy: "dev.sdms.10.1.10.13.xip.io:8888",
-        host: "localhost",
-        port: 8888
+        host: "localhost"
     });
     gulp.watch('./public/assets/js/*.js', ['lint', 'scripts']);
     gulp.watch([config.sassPath + '/**/*.scss', './public/assets/scss/*.scss'], ['css']);
