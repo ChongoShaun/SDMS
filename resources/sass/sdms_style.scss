@@ -1,6 +1,6 @@
 // Declare custom fonts
 
-$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: 'Century Gothic', Arial, sans-serif;
 
 // Import bootstrap and fontawesome
 @import "bootstrap";
@@ -29,9 +29,26 @@ $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	border-bottom:1px solid lighten($gray-base, 85%);
 }
 
+.logo{
+	margin-top:30px;
+	text-align:center;
+}
+
+.intro{
+	h1{
+		font-size:41px;
+		color: rgb(35, 63, 149);
+	}
+	p{
+		font-size: 16px;
+		line-height:22px;
+	}
+}
+
 // # Search Input
 
 #search-input{
+	margin-bottom:20px;
     padding: 15px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
@@ -68,19 +85,35 @@ $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		background: -o-linear-gradient(45deg, rgb(35, 63, 149) 50%, rgb(57, 82, 160) 51%);
 		background: -ms-linear-gradient(45deg, rgb(35, 63, 149) 50%, rgb(57, 82, 160) 51%);
 		background: linear-gradient(135deg, rgb(35, 63, 149) 50%, rgb(57, 82, 160) 51%);
-		i{
-			padding-left:10px;
-			vertical-align:middle;
+		&:after{
+			font-family: FontAwesome;
+		    content: "\f138";    
+		    float: right;
+		    color:rgb(35, 63, 149);
 		}
+	}
+}
+
+#school-count{
+	padding:20px 0 0;
+	text-align:center;
+	p{
+		margin:0;
+		padding:0;
+	}
+	strong{
+		color: rgb(57, 82, 160);
 	}
 }
 
 
 #category-panel{
+	padding-top:10px;
+	border-top:1px solid $gray-lighter;
 	.panel{
+		margin:20px 0 0;
 		background-color:$gray-lighter;
 		border:0;
-		border-bottom:2pt solid $gray;
 		box-shadow:none;
 		
 	}
@@ -93,12 +126,11 @@ $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		background: -o-linear-gradient(45deg, $gray-light 50%, $gray-light2 50%);
 		background: -ms-linear-gradient(45deg, $gray-light 50%, $gray-light2 50%);
 		background: linear-gradient(135deg, $gray-light 50%, $gray-light2 50%);
-
-
 		a{
 			font-size:16px;
 			color:#fff;
 		    font-family: FontAwesome;
+			cursor: pointer;
 			&:after {
 				content:"HIDE \f056";
 				font-family: FontAwesome;
@@ -123,30 +155,35 @@ $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	
 	.panel-body{
 		.category-column{
+			padding-left:50px;
 			ul{
-			}
-			.fa-li{
-				left: 0.85714em;
+				margin:10px 0;
+			}			
+			ul ul{
+				margin:0;
 			}
 			li{
-				padding-left:30px;
-				padding-bottom:20px;
+				padding:7px 0 7px 40px;
 				font-size:12px;
 				text-transform:uppercase;
 				color:#223e95;
 				font-weight:bold;
 			}
+			a{
+				display:block;
+				color:$gray;
+				&:hover{
+					color:rgb(57, 82, 160);
+				}
+			}
 			li li{
-				padding-left:0;
+				margin-left:-40px;
+				padding-left:40px;
 				font-size:14px;
 				color:$gray;
 				font-weight:normal;
+				font-family:Arial, sans-serif;
 				text-transform:none;
-			}
-			.icon-schools{
-				background-image:url(../images/icons/icon_schools.svg);
-				background-position:left top;
-				background-repeat:no-repeat;
 			}
 		}
 	}
@@ -163,6 +200,228 @@ $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color:rgb(35,63,149);
 	color:#fff;
 	text-align:center;
+}
+
+// #Result Filters
+
+.result-content{
+	h2{
+		padding-left:8px;
+		color: rgb(35, 63, 149);
+		font-weight:bold;
+		span{
+			font-weight:normal;
+			color:$gray;
+		}
+
+	}
+	table{
+		margin-top:20px;
+		
+	}
+	th{
+		font-size:16px;
+		font-weight:bold;
+		color: rgb(35, 63, 149);
+	}
+	.sort-short-menu{
+		padding-left:8px;
+		a{
+			color: rgb(35, 63, 149);
+			font-weight:bold;
+		}
+	}
+}
+
+
+// #School Views
+
+#school-panel{
+	@extend #category-panel;
+	.panel-heading {
+		padding:30px 40px;
+		background: $gray-lighter;
+		h1{
+			font-size:34px;
+			color: rgb(35, 63, 149);
+		}
+		a{
+			font-size:34px;
+			color: rgb(35, 63, 149);
+			&:after {
+				font-size:16px;
+			}
+			&.collapsed{
+				font-size:34px;
+				&:after {
+					font-size:16px;
+				}
+			}
+		}
+	}
+	.school-body{
+		
+	}
+	
+}
+
+.footable-even{
+	background-color:$gray-lighter;
+}
+.footable-odd{
+	background-color:#fff;
+}
+
+
+// Icons
+
+.icon {
+	background-position:left 5px;
+	background-repeat:no-repeat;
+	background-size:30px;
+}
+
+.icon-icon_foodservices {
+	background-image: url(../images/icons/SVG/icon_foodservices.svg);
+}
+
+.icon-icon_utilities {
+	background-image: url(../images/icons/SVG/icon_utilities.svg);
+}
+
+.icon-icon_security {
+	background-image: url(../images/icons/SVG/icon_security.svg);
+}
+
+.icon-icon_informationtechnology {
+	background-image: url(../images/icons/SVG/icon_informationtechnology.svg);
+}
+
+.icon-icon_maintenance {
+	background-image: url(../images/icons/SVG/icon_maintenance.svg);
+}
+
+.icon-icon_coshare {
+	background-image: url(../images/icons/SVG/icon_coshare.svg);
+}
+
+.icon-icon_playgrounds {
+	background-image: url(../images/icons/SVG/icon_playgrounds.svg);
+}
+
+.icon-icon_ADA {
+	background-image: url(../images/icons/SVG/icon_ADA.svg);
+}
+
+.icon-icon_airconditioning {
+	background-image: url(../images/icons/SVG/icon_airconditioning.svg);
+}
+
+.icon-icon_warmingkitchen {
+	background-image: url(../images/icons/SVG/icon_warmingkitchen.svg);
+}
+
+.icon-icon_cookingkitchen {
+	background-image: url(../images/icons/SVG/icon_cookingkitchen.svg);
+}
+
+.icon-icon_swimmingpool {
+	background-image: url(../images/icons/SVG/icon_swimmingpool.svg);
+}
+
+.icon-icon_stadium {
+	background-image: url(../images/icons/SVG/icon_stadium.svg);
+}
+
+.icon-icon_facilityaddress {
+	background-image: url(../images/icons/SVG/icon_facilityaddress.svg);
+}
+
+.icon-icon_programs {
+	background-image: url(../images/icons/SVG/icon_programs.svg);
+}
+
+.icon-icon_replicating {
+	background-image: url(../images/icons/SVG/icon_replicating.svg);
+}
+
+.icon-icon_coreinstructfunding {
+	background-image: url(../images/icons/SVG/icon_coreinstructfunding.svg);
+}
+
+.icon-icon_gradesserved {
+	background-image: url(../images/icons/SVG/icon_gradesserved.svg);
+}
+
+.icon-icon_gradecategory {
+	background-image: url(../images/icons/SVG/icon_gradecategory.svg);
+}
+
+.icon-icon_network {
+	background-image: url(../images/icons/SVG/icon_network.svg);
+}
+
+.icon-icon_governance {
+	background-image: url(../images/icons/SVG/icon_governance.svg);
+}
+
+.icon-icon_identification {
+	background-image: url(../images/icons/SVG/icon_identification.svg);
+}
+
+.icon-icon_busdrop {
+	background-image: url(../images/icons/SVG/icon_busdrop.svg);
+}
+
+.icon-icon_mailrun {
+	background-image: url(../images/icons/SVG/icon_mailrun.svg);
+}
+
+.icon-icon_deliveryaddress {
+	background-image: url(../images/icons/SVG/icon_deliveryaddress.svg);
+}
+
+.icon-icon_schooladdress {
+	background-image: url(../images/icons/SVG/icon_schooladdress.svg);
+}
+
+.icon-icon_principalname {
+	background-image: url(../images/icons/SVG/icon_principalname.svg);
+}
+
+.icon-icon_website {
+	background-image: url(../images/icons/SVG/icon_website.svg);
+}
+
+.icon-icon_faxnumber {
+	background-image: url(../images/icons/SVG/icon_faxnumber.svg);
+}
+
+.icon-icon_phonenumber {
+	background-image: url(../images/icons/SVG/icon_phonenumber.svg);
+}
+
+.icon-icon_schools {
+	background-image: url(../images/icons/SVG/icon_schools.svg);
+}
+
+
+// #Mobile
+
+.mobile-menu{
+	border-top:1px solid $gray-light;
+	border-bottom:1px solid $gray-light;
+	text-align:center;
+	button{
+		border:0;
+		i{
+			color: rgb(35, 63, 149);
+		}
+		span{
+			color: rgb(35, 63, 149);
+			
+		}
+	}
 }
 
 
