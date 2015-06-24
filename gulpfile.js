@@ -29,11 +29,13 @@ gulp.task('bower', function() {
         .pipe(gulp.dest(config.bowerDir))
 });
 
+/*
 gulp.task('lint', function() {
     return gulp.src('./public/assets/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
+*/
 
 gulp.task('scripts', function() {
     return gulp.src('./public/assets/js/*.js')
@@ -101,10 +103,10 @@ gulp.task('watch', function() {
         proxy: "dev.sdms.10.1.10.13.xip.io:8888",
         host: "localhost"
     });
-    gulp.watch('./public/assets/js/*.js', ['lint', 'scripts']);
+    gulp.watch('./public/assets/js/*.js', ['scripts']);
     gulp.watch([config.sassPath + '/**/*.scss', './public/assets/scss/*.scss'], ['css']);
     gulp.watch("./*.html").on('change', reload);
 
 });
 
-gulp.task('default', ['bower', 'icons', 'css', 'lint', 'scripts', 'watch']);
+gulp.task('default', ['bower', 'icons', 'css', 'scripts', 'watch']);

@@ -76,7 +76,8 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 
 #browse-button{
 	button{
-		padding:29px 20px 26px;
+		position: relative; 
+		padding:27px 20px;
 		border:none;
 		color:#fff;
 		background: rgb(35, 63, 149);
@@ -86,9 +87,11 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		background: -ms-linear-gradient(45deg, rgb(35, 63, 149) 50%, rgb(57, 82, 160) 51%);
 		background: linear-gradient(135deg, rgb(35, 63, 149) 50%, rgb(57, 82, 160) 51%);
 		&:after{
+			padding-top:3px;
 			font-family: FontAwesome;
 		    content: "\f138";    
-		    float: right;
+			position: absolute;
+			right:20px;
 		    color:rgb(35, 63, 149);
 		}
 	}
@@ -106,15 +109,18 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 	}
 }
 
+.panel{
+	border:0;
+	box-shadow:none;
+}
 
 #category-panel{
 	padding-top:10px;
 	border-top:1px solid $gray-lighter;
 	.panel{
 		margin:20px 0 0;
-		background-color:$gray-lighter;
-		border:0;
-		box-shadow:none;
+		border:0 !important;
+		box-shadow:0 !important;
 		
 	}
 	.panel-heading {
@@ -131,15 +137,27 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 			color:#fff;
 		    font-family: FontAwesome;
 			cursor: pointer;
-			&:after {
-				content:"HIDE \f056";
+			&:before {
+				content:"\f056";
 				font-family: FontAwesome;
 				float: right;
+				color: #fff;
+			}
+
+			&:after {
+				float:right;
+				padding-right:5px;
+				content:"HIDE ";
+				color: #fff;
 			}
 			&.collapsed{
-				&:after {
-					content:"SHOW \f055";
+				&:before{
+					content:"\f055";
 					font-family: FontAwesome;
+					
+				}
+				&:after {
+					content:"SHOW ";
 				}
 			}
 		}
@@ -154,6 +172,7 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 	}
 	
 	.panel-body{
+		background-color:$gray-lighter;
 		.category-column{
 			padding-left:50px;
 			ul{
@@ -189,18 +208,6 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 	}
 }
 
-.footer-utility{
-	height:30px;
-	background-color:lighten($gray-base, 90%);
-	border-top: 1px solid $gray-light;
-}
-
-.footer-main{
-	padding:21px;
-	background-color:rgb(35,63,149);
-	color:#fff;
-	text-align:center;
-}
 
 // #Result Filters
 
@@ -238,9 +245,18 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 
 #school-panel{
 	@extend #category-panel;
+	margin:15px 0;
+	border-top:2px solid rgb(35, 63, 149);
 	.panel-heading {
-		padding:30px 40px;
+		padding:25px 40px;
 		background: $gray-lighter;
+		background: -moz-linear-gradient(top, rgb(238,238,238) 0%, rgb(255,255,255) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(238,238,238)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 		h1{
 			font-size:34px;
 			color: rgb(35, 63, 149);
@@ -248,22 +264,269 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		a{
 			font-size:34px;
 			color: rgb(35, 63, 149);
+/*
+			&:before{
+				padding-top:10px;
+				font-size:16px;
+				color: $gray-light;
+			}
 			&:after {
 				font-size:16px;
 			}
 			&.collapsed{
 				font-size:34px;
+				&:before{
+					font-size:16px;
+				}
 				&:after {
+					font-size:16px;
+				}
+			}
+*/
+
+			&:before {
+				padding-top:10px;
+				content:"\f056";
+				font-family: FontAwesome;
+				float: right;
+				color: $gray-light;
+				font-size:16px;
+			}
+
+			&:after {
+				padding:10px 5px 0 0;
+				float:right;
+				content:"HIDE ";
+				color: $gray-light;
+				font-size:16px;
+			}
+			&.collapsed{
+				&:before{
+					content:"\f055";
+					font-family: FontAwesome;
+					font-size:16px;
+					
+				}
+				&:after {
+					padding-top:10px;
+					content:"SHOW ";
+					font-size:16px;
+				}
+			}
+
+
+		}
+	}
+	.panel-body{
+		margin:5px 0 15px;
+		padding-left:50px;
+		background-color: rgb(244,245,250);
+		border: 1px solid $gray-light3;
+		@include border-radius(5px);
+	
+		ul{
+			margin:10px 0;
+		}			
+		li{
+			padding:7px 0 7px 40px;
+			font-size:12px;
+			color:$gray;
+			font-weight:normal;
+			font-family:Arial, sans-serif;
+			text-transform:none;		}
+		span{
+			display:block;
+			font-size:14px;
+			color:#223e95;
+			font-weight:bold;
+			
+		}
+		.list-group-item-heading{
+			@extend span;
+			text-transform: uppercase;
+			
+		}
+	}
+	.row{
+		.col-md-4{
+			border-left:1px solid $gray-light3;
+			&:first-child{
+				border:0;
+			}
+		}
+	}
+}
+
+/* Program Views */
+
+#programs-panel{
+	@extend #school-panel;
+	margin:15px 0;
+	border-top:2px solid $gray-lighter;
+	.panel-heading {
+		padding:25px 40px 25px 25px;
+		background: $gray-lighter;
+		background: -moz-linear-gradient(top, rgb(238,238,238) 0%, rgb(255,255,255) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(238,238,238)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		h1{
+			font-size:16px;
+			color: rgb(35, 63, 149);
+		}
+		a{
+			padding-left:40px;
+			font-size:16px;
+			color:rgb(0,172,205);
+			&.icon{
+				background-position: left center;
+			}
+			&:before {
+				padding-top:0;
+			}
+
+			&:after {
+				padding-top:0;
+			}
+			&.collapsed{
+				&:after {
+					padding-top:0;
+				}
+			}
+		}
+	}
+	.panel-body{
+		padding-left:10px;
+		background-color: rgb(242,251,252);
+		ul{
+			margin:10px 0;
+		}			
+		li{
+			padding:7px 0 7px 0px;
+			font-size:12px;
+			color:$gray;
+			font-weight:normal;
+			font-family:Arial, sans-serif;
+			text-transform:none;		}
+		span{
+			display:block;
+			font-size:14px;
+			color:rgb(0,172,205);
+			font-weight:bold;
+			
+		}
+		.list-group-item-heading{
+			@extend span;
+			text-transform: uppercase;
+			
+		}
+	}
+	.row{
+		.col-md-4{
+			border-left:1px solid $gray-light3;
+			&:first-child{
+				border:0;
+			}
+		}
+		&:first-child{
+			margin-top:0;
+		}
+	}
+}
+
+/* Facilities View */
+
+#facilities-panel{
+	@extend #school-panel;
+	margin:15px 0;
+	border-top:2px solid $gray-lighter;
+	.panel-heading {
+		padding:25px 40px 25px 25px;
+		background: $gray-lighter;
+		background: -moz-linear-gradient(top, rgb(238,238,238) 0%, rgb(255,255,255) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(238,238,238)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgb(238,238,238) 0%,rgb(255,255,255) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		h1{
+			font-size:16px;
+			color: rgb(35, 63, 149);
+		}
+		a{
+			padding-left:0px;
+			font-size:16px;
+			&:before{
+				padding-top:0;
+			}
+			&:after {
+				padding-top:0;
+			}
+			&.collapsed{
+				font-size:16px;
+				&:after {
+					padding-top:0;
 					font-size:16px;
 				}
 			}
 		}
 	}
-	.school-body{
-		
+	.panel-body{
+		padding-left:10px;
+		background-color: rgb(255,255,255);
+		border:0;
+		ul{
+			margin:10px 0;
+		}			
+		li{
+			padding:7px 0 7px 0px;
+			&.icon{
+				padding-left:40px;
+			}
+		}
+		span{
+			font-size:16px;
+		}
 	}
-	
+	.row{
+		&:first-child{
+			margin-top:0;
+		}
+		div[class*="col-sm-6"]{
+			padding:0 !important;
+		}
+
+	}
+	.facility-icons{
+		font-size:12px;
+		font-weight:bold;
+		text-align:center;
+		div[class*="icon_"]{
+			width:100%;
+			height:100px;
+			background-size:100px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			&.on{
+
+			}
+		}
+	}
+
 }
+
+#facility-service-panel{
+	@extend #facilities-panel;
+	margin:15px 0 100px;
+	padding-bottom:15px;
+	border-bottom:2px solid $gray-lighter;
+
+}
+
 
 .footable-even{
 	background-color:$gray-lighter;
@@ -281,127 +544,127 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 	background-size:30px;
 }
 
-.icon-icon_foodservices {
+.icon_foodservices {
 	background-image: url(../images/icons/SVG/icon_foodservices.svg);
 }
 
-.icon-icon_utilities {
+.icon_utilities {
 	background-image: url(../images/icons/SVG/icon_utilities.svg);
 }
 
-.icon-icon_security {
+.icon_security {
 	background-image: url(../images/icons/SVG/icon_security.svg);
 }
 
-.icon-icon_informationtechnology {
+.icon_informationtechnology {
 	background-image: url(../images/icons/SVG/icon_informationtechnology.svg);
 }
 
-.icon-icon_maintenance {
+.icon_maintenance {
 	background-image: url(../images/icons/SVG/icon_maintenance.svg);
 }
 
-.icon-icon_coshare {
+.icon_coshare {
 	background-image: url(../images/icons/SVG/icon_coshare.svg);
 }
 
-.icon-icon_playgrounds {
+.icon_playgrounds {
 	background-image: url(../images/icons/SVG/icon_playgrounds.svg);
 }
 
-.icon-icon_ADA {
+.icon_ADA {
 	background-image: url(../images/icons/SVG/icon_ADA.svg);
 }
 
-.icon-icon_airconditioning {
+.icon_airconditioning {
 	background-image: url(../images/icons/SVG/icon_airconditioning.svg);
 }
 
-.icon-icon_warmingkitchen {
+.icon_warmingkitchen {
 	background-image: url(../images/icons/SVG/icon_warmingkitchen.svg);
 }
 
-.icon-icon_cookingkitchen {
+.icon_cookingkitchen {
 	background-image: url(../images/icons/SVG/icon_cookingkitchen.svg);
 }
 
-.icon-icon_swimmingpool {
+.icon_swimmingpool {
 	background-image: url(../images/icons/SVG/icon_swimmingpool.svg);
 }
 
-.icon-icon_stadium {
+.icon_stadium {
 	background-image: url(../images/icons/SVG/icon_stadium.svg);
 }
 
-.icon-icon_facilityaddress {
+.icon_facilityaddress {
 	background-image: url(../images/icons/SVG/icon_facilityaddress.svg);
 }
 
-.icon-icon_programs {
+.icon_programs {
 	background-image: url(../images/icons/SVG/icon_programs.svg);
 }
 
-.icon-icon_replicating {
+.icon_replicating {
 	background-image: url(../images/icons/SVG/icon_replicating.svg);
 }
 
-.icon-icon_coreinstructfunding {
+.icon_coreinstructfunding {
 	background-image: url(../images/icons/SVG/icon_coreinstructfunding.svg);
 }
 
-.icon-icon_gradesserved {
+.icon_gradesserved {
 	background-image: url(../images/icons/SVG/icon_gradesserved.svg);
 }
 
-.icon-icon_gradecategory {
+.icon_gradecategory {
 	background-image: url(../images/icons/SVG/icon_gradecategory.svg);
 }
 
-.icon-icon_network {
+.icon_network {
 	background-image: url(../images/icons/SVG/icon_network.svg);
 }
 
-.icon-icon_governance {
+.icon_governance {
 	background-image: url(../images/icons/SVG/icon_governance.svg);
 }
 
-.icon-icon_identification {
+.icon_identification {
 	background-image: url(../images/icons/SVG/icon_identification.svg);
 }
 
-.icon-icon_busdrop {
+.icon_busdrop {
 	background-image: url(../images/icons/SVG/icon_busdrop.svg);
 }
 
-.icon-icon_mailrun {
+.icon_mailrun {
 	background-image: url(../images/icons/SVG/icon_mailrun.svg);
 }
 
-.icon-icon_deliveryaddress {
+.icon_deliveryaddress {
 	background-image: url(../images/icons/SVG/icon_deliveryaddress.svg);
 }
 
-.icon-icon_schooladdress {
+.icon_schooladdress {
 	background-image: url(../images/icons/SVG/icon_schooladdress.svg);
 }
 
-.icon-icon_principalname {
+.icon_principalname {
 	background-image: url(../images/icons/SVG/icon_principalname.svg);
 }
 
-.icon-icon_website {
+.icon_website {
 	background-image: url(../images/icons/SVG/icon_website.svg);
 }
 
-.icon-icon_faxnumber {
+.icon_faxnumber {
 	background-image: url(../images/icons/SVG/icon_faxnumber.svg);
 }
 
-.icon-icon_phonenumber {
+.icon_phonenumber {
 	background-image: url(../images/icons/SVG/icon_phonenumber.svg);
 }
 
-.icon-icon_schools {
+.icon_schools {
 	background-image: url(../images/icons/SVG/icon_schools.svg);
 }
 
@@ -420,6 +683,70 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		span{
 			color: rgb(35, 63, 149);
 			
+		}
+	}
+}
+
+@media(max-width:1200px){
+	#facilities-panel{
+		.facility-icons{
+			div[class*="icon_"]{
+				height:80px;
+				background-size:80px;
+				&.on{
+	
+				}
+			}
+		}
+		
+	}
+}
+
+
+@media(max-width:992px){
+	#school-panel{
+		.row{
+			.col-md-4{
+				border: 0;
+			}
+		}
+	}
+	#facilities-panel{
+		.facility-icons{
+			div[class*="icon_"]{
+				height:50px;
+				background-size:50px;
+				&.on{
+	
+				}
+			}
+		}
+		
+	}
+}
+
+@media(max-width:767px){
+	.intro{
+		p{
+			padding-top:20px;
+		}
+	}
+
+	#school-panel{
+		.panel-title{
+			a{
+				&:before {
+					display:none;
+				}
+				&:after {
+					display:none;
+				}
+			}
+		}
+		.row{
+			.col-md-4{
+				border: 0;
+			}
 		}
 	}
 }

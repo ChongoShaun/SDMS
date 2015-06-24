@@ -92,7 +92,7 @@
 							            <div class="panel-body">
 											<div class="col-sm-4 category-column">
 											   	<ul class="list-group list-unstyled">
-													<li class="list-group-item-heading icon icon-icon_schools">SCHOOLS
+													<li class="list-group-item-heading icon icon_schools">SCHOOLS
 														<ul class="list-unstyled">
 															<li><a href="#">School name (short)</a></li>
 															<li><a href="#">School long name (board approved)</a></li>
@@ -100,20 +100,20 @@
 													</li>
 											        <li class="list-group-item-heading">CONTACT INFORMATION
 														<ul class="list-unstyled">
-													        <li class="icon icon-icon_phonenumber"><a href="#">Phone number</a></li>
-													        <li class="icon icon-icon_faxnumber"><a href="#">Fax number</a></li>
-													        <li class="icon icon-icon_website"><a href="#">Website URL</a></li>
-													        <li class="icon icon-icon_principalname"><a href="#">Principal Name</a></li>
+													        <li class="icon icon_phonenumber"><a href="#">Phone number</a></li>
+													        <li class="icon icon_faxnumber"><a href="#">Fax number</a></li>
+													        <li class="icon icon_website"><a href="#">Website URL</a></li>
+													        <li class="icon icon_principalname"><a href="#">Principal Name</a></li>
 												        </ul>
 											        </li>
 											    </ul>
 											   	<ul class="list-group list-unstyled">
 													<li class="list-group-item-heading">ADDRESSES
 														<ul class="list-unstyled">
-															<li class="icon icon-icon_schooladdress"><a href="#">School Address (Unit Address)</a></li>
-													        <li class="icon icon-icon_deliveryaddress"><a href="#">Delivery address (Ship to Address) </a></li>
-													        <li class="icon icon-icon_mailrun"><a href="#">Mail run designations and/or routes - GSR</a></li>
-													        <li class="icon icon-icon_busdrop">
+															<li class="icon icon_schooladdress"><a href="#">School Address (Unit Address)</a></li>
+													        <li class="icon icon_deliveryaddress"><a href="#">Delivery address (Ship to Address) </a></li>
+													        <li class="icon icon_mailrun"><a href="#">Mail run designations and/or routes - GSR</a></li>
+													        <li class="icon icon_busdrop">
 													        	<a href="#">Bus drop-off address</a><br />
 													        	<a href="#">Bus pick-up address</a>
 													        </li>
@@ -124,7 +124,7 @@
 			
 											<div class="col-sm-4 category-column">
 											   	<ul class="list-group list-unstyled">
-													<li class="list-group-item-heading icon icon-icon_identification">IDENTIFICATION
+													<li class="list-group-item-heading icon icon_identification">IDENTIFICATION
 														<ul class="list-unstyled">
 															<li><a href="#">Oracle Unit # &ldquo;Financial Unit ID&rdquo;</a></li>
 													        <li><a href="#">Facility ID</a></li>
@@ -138,24 +138,24 @@
 											   	<ul class="list-group list-unstyled">
 													<li class="list-group-item-heading">INFORMATION
 														<ul class="list-unstyled">
-															<li class="icon icon-icon_governance"><a href="#">Governance</a></li>
-													        <li class="icon icon-icon_network"><a href="#">Network</a></li>
-													        <li class="icon icon-icon_gradecategory">
+															<li class="icon icon_governance"><a href="#">Governance</a></li>
+													        <li class="icon icon_network"><a href="#">Network</a></li>
+													        <li class="icon icon_gradecategory">
 													        	<a href="#">Grade Category (Primary)</a><br />
 																<a href="#">Grade Category (Secondary)</a>
 															</li>
-													        <li class="icon icon-icon_gradesserved">
+													        <li class="icon icon_gradesserved">
 													        	<a href="#">Current Grades Served</a><br />
 																<a href="#">Subsequent Grades Served</a><br />
 																<a href="#">Grades Served at Maturity</a>
 															</li>
-													        <li class="icon icon-icon_coreinstructfunding"><a href="#">Core Instruction Funding</a></li>
-													        <li class="icon icon-icon_replicating"><a href="#">Replicating (Charters Only)</a></li>
+													        <li class="icon icon_coreinstructfunding"><a href="#">Core Instruction Funding</a></li>
+													        <li class="icon icon_replicating"><a href="#">Replicating (Charters Only)</a></li>
 														</ul>										
 													</li>
 											    </ul>
 											   	<ul class="list-group list-unstyled">
-													<li class="list-group-item-heading icon icon-icon_programs">PROGRAMS</li>
+													<li class="list-group-item-heading icon icon_programs">PROGRAMS</li>
 												</ul>
 											</div>
 											
@@ -163,26 +163,26 @@
 											   	<ul class="list-group list-unstyled">
 													<li class="list-group-item-heading">FACILITIES
 														<ul class="list-unstyled">
-															<li class="icon icon-icon_facilityaddress"><a href="#">Facility address</a></li>
-															<li class="icon icon-icon_swimmingpool"><a href="#">Swimming Pool</a></li>
-															<li class="icon icon-icon_stadium"><a href="#">Stadium</a></li>
-															<li class="icon icon-icon_cookingkitchen"><a href="#">Cooking Kitchen</a></li>
-															<li class="icon icon-icon_warmingkitchen"><a href="#">Warming Kitchen</a></li>
-															<li class="icon icon-icon_airconditioning"><a href="#">Air Conditioning </a></li>
-															<li class="icon icon-icon_ADA"><a href="#">ADA</a></li>
-															<li class="icon icon-icon_playgrounds"><a href="#">Play Grounds</a></li>
-															<li class="icon icon-icon_coshare"><a href="#">Co-Share</a></li>
+															<li class="icon icon_facilityaddress"><a href="#">Facility address</a></li>
+															<li class="icon icon_swimmingpool"><a href="#">Swimming Pool</a></li>
+															<li class="icon icon_stadium"><a href="#">Stadium</a></li>
+															<li class="icon icon_cookingkitchen"><a href="#">Cooking Kitchen</a></li>
+															<li class="icon icon_warmingkitchen"><a href="#">Warming Kitchen</a></li>
+															<li class="icon icon_airconditioning"><a href="#">Air Conditioning </a></li>
+															<li class="icon icon_ADA"><a href="#">ADA</a></li>
+															<li class="icon icon_playgrounds"><a href="#">Play Grounds</a></li>
+															<li class="icon icon_coshare"><a href="#">Co-Share</a></li>
 														</ul>
 													</li>
 												</ul>
 											   	<ul class="list-group list-unstyled">
 													<li class="list-group-item-heading">FACILITY SERVICES
 														<ul class="list-unstyled">
-															<li class="icon icon-icon_maintenance"><a href="#">Maintenance</a></li>
-															<li class="icon icon-icon_informationtechnology"><a href="#">Information and Technology</a></li>
-															<li class="icon icon-icon_security"><a href="#">Security Services Personnel</a></li>
-															<li class="icon icon-icon_utilities"><a href="#">Utilities</a></li>
-															<li class="icon icon-icon_foodservices"><a href="#">Food Services</a></li>
+															<li class="icon icon_maintenance"><a href="#">Maintenance</a></li>
+															<li class="icon icon_informationtechnology"><a href="#">Information and Technology</a></li>
+															<li class="icon icon_security"><a href="#">Security Services Personnel</a></li>
+															<li class="icon icon_utilities"><a href="#">Utilities</a></li>
+															<li class="icon icon_foodservices"><a href="#">Food Services</a></li>
 														</ul>
 													</li>
 												</ul>
