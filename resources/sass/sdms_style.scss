@@ -124,7 +124,7 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		
 	}
 	.panel-heading {
-		padding:25px 40px;
+		padding:15px 40px;
 		text-transform: uppercase;
 		background: $gray-light;
 		background: -moz-linear-gradient(45deg, $gray-light 50%, $gray-light2 50%);
@@ -208,6 +208,25 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 	}
 }
 
+// #School Page Adjustments
+.page-school-view {
+	#search-input{
+		margin-bottom:0px;
+		padding:8px 15px;		
+	}
+	#browse-button{
+		button{
+			padding:20px 20px;
+		}
+	}
+	#category-panel{
+		margin-bottom:0;
+		padding-top:0;
+	}
+	
+}
+
+
 
 // #Result Filters
 
@@ -263,27 +282,9 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		}
 		a{
 			font-size:34px;
+			text-transform:capitalize;
+			font-weight:bold;			
 			color: rgb(35, 63, 149);
-/*
-			&:before{
-				padding-top:10px;
-				font-size:16px;
-				color: $gray-light;
-			}
-			&:after {
-				font-size:16px;
-			}
-			&.collapsed{
-				font-size:34px;
-				&:before{
-					font-size:16px;
-				}
-				&:after {
-					font-size:16px;
-				}
-			}
-*/
-
 			&:before {
 				padding-top:10px;
 				content:"\f056";
@@ -291,6 +292,7 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 				float: right;
 				color: $gray-light;
 				font-size:16px;
+				font-weight:normal;
 			}
 
 			&:after {
@@ -299,22 +301,23 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 				content:"HIDE ";
 				color: $gray-light;
 				font-size:16px;
+				font-weight:normal;
 			}
 			&.collapsed{
 				&:before{
 					content:"\f055";
 					font-family: FontAwesome;
 					font-size:16px;
-					
+					font-weight:normal;
+						
 				}
 				&:after {
 					padding-top:10px;
 					content:"SHOW ";
 					font-size:16px;
+					font-weight:normal;
 				}
 			}
-
-
 		}
 	}
 	.panel-body{
@@ -356,6 +359,8 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		}
 	}
 }
+
+
 
 /* Program Views */
 
@@ -507,13 +512,10 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 		text-align:center;
 		div[class*="icon_"]{
 			width:100%;
-			height:100px;
-			background-size:100px;
+			height:80px;
+			background-size:80px;
 			background-position: center center;
 			background-repeat: no-repeat;
-			&.on{
-
-			}
 		}
 	}
 
@@ -545,127 +547,128 @@ $font-family-base: 'Century Gothic', Arial, sans-serif;
 }
 
 .icon_foodservices {
-	background-image: url(../images/icons/SVG/icon_foodservices.svg);
+	@include iconSwitch('icon_foodservices');
+
 }
 
 .icon_utilities {
-	background-image: url(../images/icons/SVG/icon_utilities.svg);
+	@include iconSwitch('icon_utilities');
 }
 
 .icon_security {
-	background-image: url(../images/icons/SVG/icon_security.svg);
+	@include iconSwitch('icon_security');
 }
 
 .icon_informationtechnology {
-	background-image: url(../images/icons/SVG/icon_informationtechnology.svg);
+	@include iconSwitch('icon_informationtechnology');
 }
 
 .icon_maintenance {
-	background-image: url(../images/icons/SVG/icon_maintenance.svg);
+	@include iconSwitch('icon_maintenance');
 }
 
 .icon_coshare {
-	background-image: url(../images/icons/SVG/icon_coshare.svg);
+	@include iconSwitch('icon_coshare');
 }
 
 .icon_playgrounds {
-	background-image: url(../images/icons/SVG/icon_playgrounds.svg);
+	@include iconSwitch('icon_playgrounds');
 }
 
 .icon_ADA {
-	background-image: url(../images/icons/SVG/icon_ADA.svg);
+	@include iconSwitch('icon_ADA');
 }
 
 .icon_airconditioning {
-	background-image: url(../images/icons/SVG/icon_airconditioning.svg);
+	@include iconSwitch('icon_airconditioning');
 }
 
 .icon_warmingkitchen {
-	background-image: url(../images/icons/SVG/icon_warmingkitchen.svg);
+	@include iconSwitch('icon_warmingkitchen');
 }
 
 .icon_cookingkitchen {
-	background-image: url(../images/icons/SVG/icon_cookingkitchen.svg);
+	@include iconSwitch('icon_cookingkitchen');
 }
 
 .icon_swimmingpool {
-	background-image: url(../images/icons/SVG/icon_swimmingpool.svg);
+	@include iconSwitch('icon_swimmingpool');
 }
 
 .icon_stadium {
-	background-image: url(../images/icons/SVG/icon_stadium.svg);
+	@include iconSwitch('icon_stadium');
 }
 
 .icon_facilityaddress {
-	background-image: url(../images/icons/SVG/icon_facilityaddress.svg);
+	@include iconSwitch('icon_facilityaddress');
 }
 
 .icon_programs {
-	background-image: url(../images/icons/SVG/icon_programs.svg);
+	@include iconSwitch('icon_programs');
 }
 
 .icon_replicating {
-	background-image: url(../images/icons/SVG/icon_replicating.svg);
+	@include iconSwitch('icon_replicating');
 }
 
 .icon_coreinstructfunding {
-	background-image: url(../images/icons/SVG/icon_coreinstructfunding.svg);
+	@include iconSwitch('icon_coreinstructfunding');
 }
 
 .icon_gradesserved {
-	background-image: url(../images/icons/SVG/icon_gradesserved.svg);
+	@include iconSwitch('icon_gradesserved');
 }
 
 .icon_gradecategory {
-	background-image: url(../images/icons/SVG/icon_gradecategory.svg);
+	@include iconSwitch('icon_gradecategory');
 }
 
 .icon_network {
-	background-image: url(../images/icons/SVG/icon_network.svg);
+	@include iconSwitch('icon_network');
 }
 
 .icon_governance {
-	background-image: url(../images/icons/SVG/icon_governance.svg);
+	@include iconSwitch('icon_governance');
 }
 
 .icon_identification {
-	background-image: url(../images/icons/SVG/icon_identification.svg);
+	@include iconSwitch('icon_identification');
 }
 
 .icon_busdrop {
-	background-image: url(../images/icons/SVG/icon_busdrop.svg);
+	@include iconSwitch('icon_busdrop');
 }
 
 .icon_mailrun {
-	background-image: url(../images/icons/SVG/icon_mailrun.svg);
+	@include iconSwitch('icon_mailrun');
 }
 
 .icon_deliveryaddress {
-	background-image: url(../images/icons/SVG/icon_deliveryaddress.svg);
+	@include iconSwitch('icon_deliveryaddress');
 }
 
 .icon_schooladdress {
-	background-image: url(../images/icons/SVG/icon_schooladdress.svg);
+	@include iconSwitch('icon_schooladdress');
 }
 
 .icon_principalname {
-	background-image: url(../images/icons/SVG/icon_principalname.svg);
+	@include iconSwitch('icon_principalname');
 }
 
 .icon_website {
-	background-image: url(../images/icons/SVG/icon_website.svg);
+	@include iconSwitch('icon_website');
 }
 
 .icon_faxnumber {
-	background-image: url(../images/icons/SVG/icon_faxnumber.svg);
+	@include iconSwitch('icon_faxnumber');
 }
 
 .icon_phonenumber {
-	background-image: url(../images/icons/SVG/icon_phonenumber.svg);
+	@include iconSwitch('icon_phonenumber');
 }
 
 .icon_schools {
-	background-image: url(../images/icons/SVG/icon_schools.svg);
+	@include iconSwitch('icon_schools');
 }
 
 

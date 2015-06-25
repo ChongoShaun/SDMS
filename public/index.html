@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2.0,user-scalable=yes" />
     <meta name="description" content="School Directory for Chicago Public Schools">
     <meta name="author" content="Chicago Public Schools">
     <title>SDMS Mockups</title>
@@ -17,12 +17,13 @@
 
 
   <body>
-  	<?php include_once("assets/images/icons/svg-defs.svg"); ?>
   	<div class="container-fluid">
   		<div class="nav nav-utility top"></div>
   		<div class="nav nav-main top"></div>
   	</div>
      
+ 	<!-- Begin Main 'Navigation' that collapses upon mobile view -->
+
     <div class="container main-content">
 		<div class="row">
 			<div class="col-sm-3 logo"><img src="assets/images/logos/logo_cps_large.png" alt="CPS Logo" class="img-responsive"></div>
@@ -30,18 +31,24 @@
 				<h1>School Directory Mockups</h1>
 				<p>User menu below to view mockup.</p>
 				<p>
-					<a href="home.php">Home</a>
+					<a href="home.html">Home</a>
 				</p>
 				<p>
-					<a href="filter-result.php">Filtered Result (Category)</a>
+					<a href="filter-result.html">Filtered Result (Category)</a>
 				</p>
 				<p>
-					<a href="school-view.php">School View</a>
+					<a href="search-result.html">Search Result</a>
+				</p>
+				<p>
+					<a href="school-view.html">School View</a>
 				</p>
 			</div>
 		</div>
     </div>
     
+ 	<!-- End Main Navigation -->
+
+
 	<div class="container-fluid">
   		<div class="footer footer-utility"></div>
   		<div class="footer footer-main">

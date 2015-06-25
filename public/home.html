@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2.0,user-scalable=yes" />
     <meta name="description" content="School Directory for Chicago Public Schools">
     <meta name="author" content="Chicago Public Schools">
     <title>SDMS</title>
@@ -16,14 +16,15 @@
   </head>
 
 
-  <body>
-  	<?php include_once("assets/images/icons/svg-defs.svg"); ?>
+  <body class="page-front">
   	<div class="container-fluid">
   		<div class="nav nav-utility top"></div>
   		<div class="nav nav-main top"></div>
   	</div>
      
-    <div class="container header-content">
+  	<!-- Begin Main 'Navigation' that collapses upon mobile view -->
+
+   <div class="container header-content">
 		<div class="row">
 			<div class="col-sm-3 logo"><img src="assets/images/logos/logo_cps_large.png" alt="CPS Logo" class="img-responsive"></div>
 			<div class="col-sm-9 intro">
@@ -34,6 +35,8 @@
 			</div>
 		</div>
     </div>
+
+	<!-- End Navigation -->
     
 	<div class="container-fluid mobile-menu visible-xs">
    		<div class="row">
