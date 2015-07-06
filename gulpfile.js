@@ -39,8 +39,10 @@ gulp.task('lint', function() {
 
 gulp.task('scripts', function() {
     return gulp.src('./public/assets/js/*.js')
+/*
         .pipe(concat('all.js'))
         .pipe(rename('all.min.js'))
+*/
         .pipe(uglify())
         .pipe(gulp.dest('./public/assets/js'));
 });
@@ -54,7 +56,7 @@ gulp.task('icons', function() {
 gulp.task('css', function() {
     return gulp.src(config.sassPath + '/sdms_style.scss')
         .pipe(sass({
-            style: 'compressed',
+            style: 'nested',
             loadPath: [
                 './resources/sass',
                 config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',

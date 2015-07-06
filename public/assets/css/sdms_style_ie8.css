@@ -1,0 +1,221 @@
+.icon {
+  background-position: left 5px;
+  background-repeat: no-repeat;
+  background-size: 30px; }
+
+.icon_foodservices {
+  background-image: url(../images/icons/PNG/icon_foodservices.png); }
+  .icon_foodservices.off {
+    background-image: url(../images/icons/PNG/icon_foodservices_grey.png); }
+  .icon_foodservices.blue {
+    background-image: url(../images/icons/PNG/icon_foodservices_blue.png); }
+
+.icon_utilities {
+  background-image: url(../images/icons/PNG/icon_utilities.png); }
+  .icon_utilities.off {
+    background-image: url(../images/icons/PNG/icon_utilities_grey.png); }
+  .icon_utilities.blue {
+    background-image: url(../images/icons/PNG/icon_utilities_blue.png); }
+
+.icon_security {
+  background-image: url(../images/icons/PNG/icon_security.png); }
+  .icon_security.off {
+    background-image: url(../images/icons/PNG/icon_security_grey.png); }
+  .icon_security.blue {
+    background-image: url(../images/icons/PNG/icon_security_blue.png); }
+
+.icon_informationtechnology {
+  background-image: url(../images/icons/PNG/icon_informationtechnology.png); }
+  .icon_informationtechnology.off {
+    background-image: url(../images/icons/PNG/icon_informationtechnology_grey.png); }
+  .icon_informationtechnology.blue {
+    background-image: url(../images/icons/PNG/icon_informationtechnology_blue.png); }
+
+.icon_maintenance {
+  background-image: url(../images/icons/PNG/icon_maintenance.png); }
+  .icon_maintenance.off {
+    background-image: url(../images/icons/PNG/icon_maintenance_grey.png); }
+  .icon_maintenance.blue {
+    background-image: url(../images/icons/PNG/icon_maintenance_blue.png); }
+
+.icon_coshare {
+  background-image: url(../images/icons/PNG/icon_coshare.png); }
+  .icon_coshare.off {
+    background-image: url(../images/icons/PNG/icon_coshare_grey.png); }
+  .icon_coshare.blue {
+    background-image: url(../images/icons/PNG/icon_coshare_blue.png); }
+
+.icon_playgrounds {
+  background-image: url(../images/icons/PNG/icon_playgrounds.png); }
+  .icon_playgrounds.off {
+    background-image: url(../images/icons/PNG/icon_playgrounds_grey.png); }
+  .icon_playgrounds.blue {
+    background-image: url(../images/icons/PNG/icon_playgrounds_blue.png); }
+
+.icon_ADA {
+  background-image: url(../images/icons/PNG/icon_ADA.png); }
+  .icon_ADA.off {
+    background-image: url(../images/icons/PNG/icon_ADA_grey.png); }
+  .icon_ADA.blue {
+    background-image: url(../images/icons/PNG/icon_ADA_blue.png); }
+
+.icon_airconditioning {
+  background-image: url(../images/icons/PNG/icon_airconditioning.png); }
+  .icon_airconditioning.off {
+    background-image: url(../images/icons/PNG/icon_airconditioning_grey.png); }
+  .icon_airconditioning.blue {
+    background-image: url(../images/icons/PNG/icon_airconditioning_blue.png); }
+
+.icon_warmingkitchen {
+  background-image: url(../images/icons/PNG/icon_warmingkitchen.png); }
+  .icon_warmingkitchen.off {
+    background-image: url(../images/icons/PNG/icon_warmingkitchen_grey.png); }
+  .icon_warmingkitchen.blue {
+    background-image: url(../images/icons/PNG/icon_warmingkitchen_blue.png); }
+
+.icon_cookingkitchen {
+  background-image: url(../images/icons/PNG/icon_cookingkitchen.png); }
+  .icon_cookingkitchen.off {
+    background-image: url(../images/icons/PNG/icon_cookingkitchen_grey.png); }
+  .icon_cookingkitchen.blue {
+    background-image: url(../images/icons/PNG/icon_cookingkitchen_blue.png); }
+
+.icon_swimmingpool {
+  background-image: url(../images/icons/PNG/icon_swimmingpool.png); }
+  .icon_swimmingpool.off {
+    background-image: url(../images/icons/PNG/icon_swimmingpool_grey.png); }
+  .icon_swimmingpool.blue {
+    background-image: url(../images/icons/PNG/icon_swimmingpool_blue.png); }
+
+.icon_stadium {
+  background-image: url(../images/icons/PNG/icon_stadium.png); }
+  .icon_stadium.off {
+    background-image: url(../images/icons/PNG/icon_stadium_grey.png); }
+  .icon_stadium.blue {
+    background-image: url(../images/icons/PNG/icon_stadium_blue.png); }
+
+.icon_facilityaddress {
+  background-image: url(../images/icons/PNG/icon_facilityaddress.png); }
+  .icon_facilityaddress.off {
+    background-image: url(../images/icons/PNG/icon_facilityaddress_grey.png); }
+  .icon_facilityaddress.blue {
+    background-image: url(../images/icons/PNG/icon_facilityaddress_blue.png); }
+
+.icon_programs {
+  background-image: url(../images/icons/PNG/icon_programs.png); }
+  .icon_programs.off {
+    background-image: url(../images/icons/PNG/icon_programs_grey.png); }
+  .icon_programs.blue {
+    background-image: url(../images/icons/PNG/icon_programs_blue.png); }
+
+.icon_replicating {
+  background-image: url(../images/icons/PNG/icon_replicating.png); }
+  .icon_replicating.off {
+    background-image: url(../images/icons/PNG/icon_replicating_grey.png); }
+  .icon_replicating.blue {
+    background-image: url(../images/icons/PNG/icon_replicating_blue.png); }
+
+.icon_coreinstructfunding {
+  background-image: url(../images/icons/PNG/icon_coreinstructfunding.png); }
+  .icon_coreinstructfunding.off {
+    background-image: url(../images/icons/PNG/icon_coreinstructfunding_grey.png); }
+  .icon_coreinstructfunding.blue {
+    background-image: url(../images/icons/PNG/icon_coreinstructfunding_blue.png); }
+
+.icon_gradesserved {
+  background-image: url(../images/icons/PNG/icon_gradesserved.png); }
+  .icon_gradesserved.off {
+    background-image: url(../images/icons/PNG/icon_gradesserved_grey.png); }
+  .icon_gradesserved.blue {
+    background-image: url(../images/icons/PNG/icon_gradesserved_blue.png); }
+
+.icon_gradecategory {
+  background-image: url(../images/icons/PNG/icon_gradecategory.png); }
+  .icon_gradecategory.off {
+    background-image: url(../images/icons/PNG/icon_gradecategory_grey.png); }
+  .icon_gradecategory.blue {
+    background-image: url(../images/icons/PNG/icon_gradecategory_blue.png); }
+
+.icon_network {
+  background-image: url(../images/icons/PNG/icon_network.png); }
+  .icon_network.off {
+    background-image: url(../images/icons/PNG/icon_network_grey.png); }
+  .icon_network.blue {
+    background-image: url(../images/icons/PNG/icon_network_blue.png); }
+
+.icon_governance {
+  background-image: url(../images/icons/PNG/icon_governance.png); }
+  .icon_governance.off {
+    background-image: url(../images/icons/PNG/icon_governance_grey.png); }
+  .icon_governance.blue {
+    background-image: url(../images/icons/PNG/icon_governance_blue.png); }
+
+.icon_identification {
+  background-image: url(../images/icons/PNG/icon_identification.png); }
+  .icon_identification.off {
+    background-image: url(../images/icons/PNG/icon_identification_grey.png); }
+  .icon_identification.blue {
+    background-image: url(../images/icons/PNG/icon_identification_blue.png); }
+
+.icon_busdrop {
+  background-image: url(../images/icons/PNG/icon_busdrop.png); }
+  .icon_busdrop.off {
+    background-image: url(../images/icons/PNG/icon_busdrop_grey.png); }
+  .icon_busdrop.blue {
+    background-image: url(../images/icons/PNG/icon_busdrop_blue.png); }
+
+.icon_mailrun {
+  background-image: url(../images/icons/PNG/icon_mailrun.png); }
+  .icon_mailrun.off {
+    background-image: url(../images/icons/PNG/icon_mailrun_grey.png); }
+  .icon_mailrun.blue {
+    background-image: url(../images/icons/PNG/icon_mailrun_blue.png); }
+
+.icon_deliveryaddress {
+  background-image: url(../images/icons/PNG/icon_deliveryaddress.png); }
+  .icon_deliveryaddress.off {
+    background-image: url(../images/icons/PNG/icon_deliveryaddress_grey.png); }
+  .icon_deliveryaddress.blue {
+    background-image: url(../images/icons/PNG/icon_deliveryaddress_blue.png); }
+
+.icon_schooladdress {
+  background-image: url(../images/icons/PNG/icon_schooladdress.png); }
+  .icon_schooladdress.off {
+    background-image: url(../images/icons/PNG/icon_schooladdress_grey.png); }
+  .icon_schooladdress.blue {
+    background-image: url(../images/icons/PNG/icon_schooladdress_blue.png); }
+
+.icon_principalname {
+  background-image: url(../images/icons/PNG/icon_principalname.png); }
+  .icon_principalname.off {
+    background-image: url(../images/icons/PNG/icon_principalname_grey.png); }
+  .icon_principalname.blue {
+    background-image: url(../images/icons/PNG/icon_principalname_blue.png); }
+
+.icon_website {
+  background-image: url(../images/icons/PNG/icon_website.png); }
+  .icon_website.off {
+    background-image: url(../images/icons/PNG/icon_website_grey.png); }
+  .icon_website.blue {
+    background-image: url(../images/icons/PNG/icon_website_blue.png); }
+
+.icon_faxnumber {
+  background-image: url(../images/icons/PNG/icon_faxnumber.png); }
+  .icon_faxnumber.off {
+    background-image: url(../images/icons/PNG/icon_faxnumber_grey.png); }
+  .icon_faxnumber.blue {
+    background-image: url(../images/icons/PNG/icon_faxnumber_blue.png); }
+
+.icon_phonenumber {
+  background-image: url(../images/icons/PNG/icon_phonenumber.png); }
+  .icon_phonenumber.off {
+    background-image: url(../images/icons/PNG/icon_phonenumber_grey.png); }
+  .icon_phonenumber.blue {
+    background-image: url(../images/icons/PNG/icon_phonenumber_blue.png); }
+
+.icon_schools {
+  background-image: url(../images/icons/PNG/icon_schools.png); }
+  .icon_schools.off {
+    background-image: url(../images/icons/PNG/icon_schools_grey.png); }
+  .icon_schools.blue {
+    background-image: url(../images/icons/PNG/icon_schools_blue.png); }
